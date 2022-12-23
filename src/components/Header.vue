@@ -49,12 +49,8 @@ export default {
 .logo {
     font-size: 22px;
     font-weight: bold;
-}
-
-a, a:hover {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    padding: 0px 10px;
 }
 
 .main-header > div {
@@ -76,5 +72,17 @@ a, a:hover {
 
 .main-nav-item {
     display: inline-block;
+    margin: 0 10px;
 }
+
+.main-nav-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav-item a:hover {
+    color: #ecd9d9;
+}
+
+
 </style>
