@@ -1,7 +1,7 @@
 import axios from "axios";
 import store from "../store";
 
-const baseURL = 'https://social-network-server-react.herokuapp.com/api';
+const baseURL = 'http://localhost:5000/api';
 
 const instance = axios.create({
     baseURL: baseURL,

@@ -171,6 +171,7 @@ export default {
 				const res = await axios.post(path, data);
 				this.isLoading = false;
 				this.setAuthToken(res.data.token);
+				this.$router.push('/dashboard')
 			} catch (error) {
 				let errorText = "";
 				if (error.response.data?.errors) {
