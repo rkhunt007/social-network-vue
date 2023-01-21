@@ -2,34 +2,30 @@
     <Header></Header>
     <div class="wrapper">
         <h3 class="dashboard-title">Dashboard</h3>
+
         <section id="friendsList">
-            <h3 class="friends-list-title">Friends List</h3>
-                <div>
-                    <article  v-for="user of users" :key="user._id" class="user">
-
-                        <h3>{{ user.user.name }}</h3>
-                        <p>{{ user.bio }}</p>
-                        <p>{{ user.city }}</p>
-                        <p>{{ user.profession }}</p>
-                        <img :src="user.user.image" :alt="user.user.name">
-                        <div>
-                            <button>Add</button>
-                        </div>
-
-                    </article>
-                    
-                </div>
+            <h3 class="friends-list-title text-center">Find Friends</h3>
+            <div>
+                <article v-for="user of users" :key="user._id" class="user-wrapper text-center">
+                    <FriendCard :user="user"></FriendCard>
+                </article>
+            </div>
         </section>
     </div>
+    <Footer></Footer>
 </template>
 
 <script>
 import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 import axios from "../api/api";
+import FriendCard from '../components/Friend-Card.vue'
 
 export default {
     components: {
-        Header
+        Header,
+        Footer,
+        FriendCard
     },
     data() {
         return {
@@ -72,18 +68,14 @@ export default {
 .dashboard-title {
     margin-left: 10px;
 }
+
 .friends-list-title {
     margin-left: 10px;
 }
 
-.user {
+.user-wrapper {
     width: calc(20% - 20px);
     display: inline-block;
-    background: #d5ffdc;
-    margin: 10px;
-    padding: 10px;
-    box-sizing: border-box;
     vertical-align: text-top;
-    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.5)
 }
 </style>

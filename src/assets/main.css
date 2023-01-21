@@ -2,4 +2,21 @@
 
 #app {
   font-weight: normal;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+p {
+  margin-bottom: 5px;
+}
+
+.text-bold {
+  font-weight: bold !important;
+}
+
+/* buttons */
+
+/* .btn
+
+.btn-primary */
